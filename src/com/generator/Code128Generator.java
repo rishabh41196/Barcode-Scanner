@@ -24,7 +24,7 @@ public class Code128Generator {
 
 		// Generate the barcode	
 		bean2.setBarHeight(10);
-		bean2.generateBarcode(canvas2, "123412341ADC234");
+		bean2.generateBarcode(canvas2, "0201D0240B1000003");
 		
 		// Signal end of generation
 		canvas2.finish();

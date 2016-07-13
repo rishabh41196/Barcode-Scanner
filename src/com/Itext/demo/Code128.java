@@ -8,6 +8,7 @@ import com.itextpdf.text.Font;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.BarcodeEAN;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.pdf.draw.VerticalPositionMark;
 
@@ -18,7 +19,7 @@ public class Code128 {
 			Document document = new Document(PageSize.A4);
 			document.addAuthor("Rishabh");
 			document.addTitle("Test");
-			PdfWriter writer = PdfWriter.getInstance(document,new FileOutputStream("C:\\Users\\Rishabh Jain\\Desktop\\New1.pdf"));
+			PdfWriter writer = PdfWriter.getInstance(document,new FileOutputStream("C:\\Users\\Rishabh Jain\\Desktop\\New2.pdf"));
 				writer.setViewerPreferences( PdfWriter.HideMenubar | PdfWriter.HideToolbar | PdfWriter.HideWindowUI );
 				document.open();
 				writer.addJavaScript("this.print({bUI : false , bSilent : true , bShrinkToFit : true});",false);
@@ -29,9 +30,9 @@ public class Code128 {
 				para.add(new Chunk(chunk));
 				para.add("Rainbow Mohali");
 
-				Image img=Image.getInstance("C:\\Users\\Rishabh Jain\\Desktop\\Test1.png");
-				
-				Paragraph paragraph = new Paragraph(Chunk.NEWLINE);
+			
+				Image img=Image.getInstance("C:\\Users\\Rishabh Jain\\Desktop\\Test2.png");
+				/*Paragraph paragraph = new Paragraph(Chunk.NEWLINE);
 				document.add(paragraph);
 				document.add(paragraph);
 				document.add(paragraph);
@@ -98,9 +99,10 @@ public class Code128 {
 				document.add(paragraph);
 				document.add(paragraph);
 				document.add(para);
+				*/
 				img.setAbsolutePosition(10 ,0);
 				document.add(img);
-				img.setAbsolutePosition(370 ,0);
+				img.setAbsolutePosition(360 ,0);
 				document.add(img);
 			
 				
